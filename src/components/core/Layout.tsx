@@ -1,13 +1,18 @@
 import React, { FC, ReactNode } from "react"
+import Navigation from "./Navigation"
+import { PageHeader } from 'antd'
 
 interface Props {
-  children: ReactNode
+  children: ReactNode,
+  title: string,
+  subTitle: string,
 }
 
-const Layout: FC<Props> = ({ children }) => {
+const Layout: FC<Props> = ({ children, title, subTitle }) => {
   return (<div>
-    layout
-    {children}
+    <Navigation />
+    <PageHeader className="jumbotron" title={title} subTitle={subTitle} />
+    <div style={{ width: "85%", margin: "0 auto" }}>{children}</div>
   </div>)
 }
 
