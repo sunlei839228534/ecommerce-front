@@ -1,7 +1,9 @@
 import React from 'react'
 import { HashRouter, Switch, Route } from 'react-router-dom'
+import AddCatgory from './components/admin/AddCatgory'
+import AddProduct from './components/admin/AddProduct'
 import AdminDashboard from './components/admin/AdminDashboard'
-import AdminRotue from './components/admin/AdminRoute'
+import AdminRoute from './components/admin/AdminRoute'
 import Dashboard from './components/admin/Dashboard'
 import PrivateRoute from './components/admin/PrivateRoute'
 import Home from './components/core/Home'
@@ -19,7 +21,9 @@ const Routes = () => {
         <Route path='/signup' component={Signup} />
         <Route path='/signin' component={Signin} />
         <PrivateRoute path="/user/dashboard" component={Dashboard}></PrivateRoute>
-        <AdminRotue path="/admin/dashboard" component={AdminDashboard} />
+        <AdminRoute path="/admin/dashboard" component={AdminDashboard} />
+        <AdminRoute path="/create/category" component={AddCatgory} />
+        <AdminRoute path="/create/product" component={AddProduct} />
       </Switch>
     </HashRouter>
   </div>)
