@@ -5,6 +5,7 @@ import Routes from './Routes';
 import store, { history } from './store';
 import { ConnectedRouter } from 'connected-react-router'
 import './style.css'
+import 'antd/dist/antd.css'
 
 ReactDOM.render(
   <Provider store={store}>
