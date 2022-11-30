@@ -29,7 +29,7 @@ const Home = () => {
       <Row gutter={[16, 16]}>
         {
           createdAt.products.map((item) => (
-            <Col span="6">
+            <Col span="6" key={item._id}>
               <ProductItem product={item} />
             </Col>
           ))
@@ -39,7 +39,7 @@ const Home = () => {
       <Row gutter={[16, 16]}>
         {
           sold.products.map((item) => (
-            <Col span="6">
+            <Col span="6" key={item._id}>
               <ProductItem product={item} />
             </Col>
           ))
